@@ -1,6 +1,7 @@
  html {
      background: rgb(238, 174, 202);
      background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+     -webkit-user-select: none;
      user-select: none;
  }
 
@@ -78,6 +79,27 @@
      width: 500px;
      border-radius: 20px;
  }
+ /* Textarea */
+ .textarea__tarea{
+    width: 80%;
+    height: 50px;
+    border-radius: 30px;
+    border: solid;
+    resize: none;
+    margin-bottom: 20px;
+    line-height: 50px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+}
+.textarea__tarea::placeholder{
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(0, 140, 255);
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+ }
 
  /* Botones agregar y borrar divs */
 
@@ -111,11 +133,12 @@
  /* Inicio de los divs Hijos */
  .div__containerHijo {
      display: flex;
-     justify-content: center;
+     justify-content: space-between;
      width: 450px;
      border-radius: 30px;
      background-color: rgb(221, 221, 221);
      margin-bottom: 20px;
+     align-items: center;
 
  }
 
@@ -129,4 +152,12 @@
      font-family: sans-serif;
      color: rgb(80, 80, 80);
      text-align: center;
+     margin-left: 5px;
+ }
+
+ .button__borrarTarea{
+    border-radius: 30px;
+    height: 50%;
+    margin-right: 5px;
+    background-color: rgb(255, 133, 133);
  }

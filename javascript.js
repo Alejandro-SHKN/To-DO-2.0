@@ -37,11 +37,17 @@ let botonBorrarDiv = document.getElementById(`ID-button__borrarDiv`);
 // nuevoDiv.innerHTML = `<h2 class="h1__titulohijo 1" id="ID-h1__titulo hijo1">Este es nuevo div agregado con JS</h2>`
 // divPrincipal.appendChild(nuevoDiv)
 
-/* Utilizando una funcion para agregar un div hijo*/
+/*Obteniendo el valor del textarea */
 
+/* Utilizando una funcion para agregar un div hijo*/
 botonAgregarDiv.addEventListener(`click`, function () {
+    let valorTextarea = document.getElementById(`ID-textarea__tarea`).value;
+    if(valorTextarea == ""){
+        alert(`Por favor introduce una tarea para agregar`)
+    } else {
   let nuevoDiv = document.createElement(`div`);
   nuevoDiv.classList.add(`div__containerHijo`);
-  nuevoDiv.innerHTML = `<h2 class="h1__titulohijo 1" id="ID-h1__titulo hijo1">Este es nuevo div agregado con JS</h2>`;
+  nuevoDiv.innerHTML = `<h2 class="h1__titulohijo 1" id="ID-h1__titulo hijo1">${valorTextarea}</h2><button class="button__borrarTarea" id="ID-button__borrarTarea">🗑️</button>`;
   divPrincipal.appendChild(nuevoDiv);
+    }
 });
